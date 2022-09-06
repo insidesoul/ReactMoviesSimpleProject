@@ -11,3 +11,154 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+nav {
+  padding: 0 1rem;
+}
+
+.content {
+  min-height: calc(100vh - 70px - 44px);
+  padding: 1.5rem 0;
+}
+
+.cardList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem
+}
+
+.search-btn {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+}
+
+.searchRadio:not(:last-child) {
+  margin: 0 3rem 0 0;
+}
+
+.input-field input[type=search] {
+  padding-left: 0.5rem;
+  background: rgba(0, 0, 0, 0.36);
+}
+
+.fullback {
+  background: url("../public/Harry-Potter-Background-Wallpaper.jpg") no-repeat center fixed;
+  background-size: cover;
+}
+
+.totalRes {
+  white-space: nowrap;
+  padding-left: 0.3rem;
+  right: 0;
+  position: absolute;
+  display: inline;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+@media (max-width: 580px) {
+  .totalRes {
+    position: relative;
+  }
+  nav .brand-logo{
+    white-space: nowrap;
+    font-size: 25px;
+  }
+}
+
+.nothingFound {
+  color: white;
+  font-weight: 600;
+  grid-column: 2 / 4;
+  text-align: center;
+}
+
+@media (max-width: 1492px) {
+  .nothingFound {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 1112px) and (min-width: 993px){
+  .nothingFound {
+    grid-column: 1 / 3;
+    text-align: center;
+  }
+}
+
+@media (max-width: 915px){
+  .nothingFound {
+    grid-column: 1 / 3;
+    text-align: center;
+  }
+}
+
+input[type=search] {
+  color: white;
+  font-weight: 600;
+}
+
+.page-footer {
+  padding-top: 0;
+}
+
+.input-field input[type=search]:focus:not(.browser-default) {
+  padding-left: 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+[type="radio"]:not(:checked)+span, [type="radio"]:checked+span {
+  color: white;
+  font-weight: 500;
+}
+
+.animation-card {
+  transition: 0.5s;
+}
+
+.animation-card:hover {
+  bottom: 2px;
+  box-shadow: 0 0 100px #006d50
+}
+
+.linkStyle{
+  color: white;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.linkStyle:hover{
+  color: white;
+}
+
+.linkStyle:before, .linkStyle:after{
+  content: '';
+  background: white;
+  position: absolute;
+  width: 0;
+  height: 2px;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.linkStyle:before{
+  top: 0;
+  left: 0;
+}
+
+.linkStyle:after{
+  top: 100%;
+  right: 0;
+}
+
+.linkStyle:hover:before, .linkStyle:hover:after{
+  width: 100%;
+}
