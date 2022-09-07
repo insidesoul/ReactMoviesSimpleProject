@@ -11,8 +11,8 @@ function Card (props) {
         <div className="card-image waves-effect waves-block waves-light">
             {
                 poster === 'N/A' ?
-                    <img className="activator" src={`https://via.placeholder.com/300x400.png?text=${title}`} /> :
-                    <img className="activator" src={poster} />
+                    <img className="activator" src={`https://via.placeholder.com/300x400.png?text=${title}`} alt="something happened" /> :
+                    <img className="activator" src={poster} alt="something happened" />
             }
         </div>
         <div className="card-content">
